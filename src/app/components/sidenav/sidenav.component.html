@@ -1,0 +1,45 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar color="primary" class="example-toolbar">
+        <button mat-icon-button (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <div>
+            <label class="home-label ml-3" routerLink="/">
+                Inicio 
+            </label>
+        </div>
+      
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+            fixedTopGap="56">
+            <label class=" label-action" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+               Formulário
+              </label>
+            <div class="collapse" id="collapseExample">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a (click)="hiddenSide(snav)" routerLinkActive="active" routerLink="/template-driven">Template driven</a>
+                    </li>
+                    <li  class="list-group-item">
+                        <a (click)="hiddenSide(snav)" routerLinkActive="active" routerLink="/react-form">Reactive Form</a>
+                    </li>
+              </ul>
+            </div>
+
+          
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <div class="content-wrapper">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+
+</div>
+
+
+
