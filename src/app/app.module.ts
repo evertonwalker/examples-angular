@@ -13,6 +13,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HomeComponent } from './components/home/home.component';
 import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
 import { ReactFormComponent } from './components/react-form/react-form.component';
+import { PrinterComponent } from './printer/printer.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ReactFormComponent } from './components/react-form/react-form.component
     SidenavComponent,
     HomeComponent,
     TemplateDrivenFormComponent,
-    ReactFormComponent
+    ReactFormComponent,
+    PrinterComponent
   ],
   imports: [
     BrowserModule,
