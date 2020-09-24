@@ -15,6 +15,7 @@ import { TemplateDrivenFormComponent } from './components/template-driven-form/t
 import { ReactFormComponent } from './components/react-form/react-form.component';
 import { PrinterComponent } from './printer/printer.component';
 
+import { NgxPrintModule } from 'ngx-print';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PrinterComponent } from './printer/printer.component';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    NgxPrintModule
   ],
   providers: [],
   bootstrap: [AppComponent]
