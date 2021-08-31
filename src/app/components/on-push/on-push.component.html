@@ -1,0 +1,13 @@
+<div >
+  <div class="full-width">
+    <button (click)=" counter =+ 1">
+      +
+    </button>
+    <button (click)="counter =- 1 " >
+      -
+    </button>
+  </div>
+  <div>
+    <app-counter [counter]="counter"></app-counter>
+  </div>
+</div>

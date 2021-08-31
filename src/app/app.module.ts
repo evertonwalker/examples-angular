@@ -16,6 +16,8 @@ import { ReactFormComponent } from './components/react-form/react-form.component
 import { PrinterComponent } from './printer/printer.component';
 
 import { NgxPrintModule } from 'ngx-print';
+import { OnPushComponent } from './components/on-push/on-push.component';
+import { CounterComponent } from './components/on-push/counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NgxPrintModule } from 'ngx-print';
     HomeComponent,
     TemplateDrivenFormComponent,
     ReactFormComponent,
-    PrinterComponent
+    PrinterComponent,
+    OnPushComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
