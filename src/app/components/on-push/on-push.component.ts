@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-on-push',
@@ -10,7 +10,7 @@ export class OnPushComponent implements OnInit {
 
   counter = 0
 
-  constructor() { }
+  constructor(private changeDetector: ChangeDetectorRef) { }
 
   ngOnInit(): void {
   }
