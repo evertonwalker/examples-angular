@@ -1,0 +1,24 @@
+<section>
+    <div>
+        <h1>
+            TODOS
+        </h1>
+
+        <div class="container">
+            <div>
+                <mat-form-field class="example-form-field" appearance="fill">
+                    <mat-label>Digite</mat-label>
+                    <input matInput type="text" [(ngModel)]="textInput" (keyup.enter)="addToList()">
+                    <button *ngIf="textInput" matSuffix mat-icon-button aria-label="Clear" (click)="textInput=''">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+            <div *ngIf="todos">
+                <ul>
+                    <li @fade *ngFor="let todo of todos; let i = index" (click)="removeTodo(i)"> {{ todo }} </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
